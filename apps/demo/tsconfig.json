@@ -1,5 +1,5 @@
 {
-  "extends": "@starter-turbo/tsconfig/tsconfig.react.json",
+  "extends": "@yaystarter/tsconfig/tsconfig.react.json",
   "compilerOptions": {
     "paths": {
       "@src/*": ["./src/*"]
