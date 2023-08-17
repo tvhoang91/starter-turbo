@@ -1,10 +1,10 @@
 {
   "extends": "@yaystarter/tsconfig/tsconfig.react.json",
   "compilerOptions": {
+    "baseUrl": ".",
     "paths": {
       "@src/*": ["./src/*"]
     }
   },
-  "include": ["src", "types"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": ["src", "types"]
 }
