@@ -1,5 +1,5 @@
 {
-  "name": "@yaystarter/turborepo",
+  "name": "@yayturbo/repo",
   "private": true,
   "scripts": {
     "build": "turbo run build",

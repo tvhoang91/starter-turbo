@@ -1,4 +1,0 @@
-{
-  "extends": "@yaystarter/tsconfig/tsconfig.node.json",
-  "include": ["vite.config.ts"]
-}

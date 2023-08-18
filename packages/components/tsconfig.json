@@ -1,5 +1,5 @@
 {
-  "extends": "@yayturbo/tsconfig/react.json",
+  "extends": "@yayturbo/tsconfig/react-lib.json",
   "compilerOptions": {
     "jsxImportSource": "@emotion/react",
     "typeRoots": ["node_modules/@yayturbo/types/types", "node_modules/@types", "types"]

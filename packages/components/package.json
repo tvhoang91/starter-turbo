@@ -1,40 +1,29 @@
 {
-  "name": "@yayturbo/demo",
+  "name": "@yayturbo/components",
+  "version": "0.0.0",
   "private": true,
-  "version": "1.0.0",
   "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "@emotion/react": "^11.11.1",
-    "@emotion/styled": "^11.11.0",
-    "@yayturbo/components": "workspace:*",
+  "main": "src/index.ts",
+  "scripts": {},
+  "peerDependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0"
   },
   "devDependencies": {
     "@babel/plugin-transform-react-jsx": "^7.22.5",
     "@emotion/babel-plugin-jsx-pragmatic": "^0.2.1",
-    "@emotion/serialize": "^1.1.2",
     "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.7",
     "@vitejs/plugin-react": "^4.0.4",
     "@yayturbo/tsconfig": "workspace:*",
     "@yayturbo/types": "workspace:*",
     "babel-plugin-macros": "^3.1.0",
-    "babel-plugin-twin": "^1.1.0",
     "tailwindcss": "^3.3.3",
     "twin.macro": "^3.4.0",
     "typescript": "^5.1.6",
     "vite": "^4.4.9",
     "vite-plugin-externals": "^0.6.2"
-  },
-  "babelMacros": {
-    "twin": {
-      "preset": "emotion"
-    }
   }
 }

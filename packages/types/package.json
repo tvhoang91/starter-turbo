@@ -1,0 +1,11 @@
+{
+  "name": "@yayturbo/types",
+  "private": true,
+  "version": "1.0.0",
+  "devDependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/serialize": "^1.1.2",
+    "@emotion/styled": "^11.11.0",
+    "twin.macro": "^3.4.0"
+  }
+}
