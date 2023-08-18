@@ -64,6 +64,7 @@ importers:
       '@babel/plugin-transform-react-jsx': ^7.22.5
       '@emotion/babel-plugin-jsx-pragmatic': ^0.2.1
       '@emotion/react': ^11.11.1
+      '@emotion/serialize': ^1.1.2
       '@emotion/styled': ^11.11.0
       '@types/react': ^18.2.20
       '@types/react-dom': ^18.2.7
@@ -83,6 +84,7 @@ importers:
     devDependencies:
       '@babel/plugin-transform-react-jsx': 7.22.5_@babel+core@7.22.10
       '@emotion/babel-plugin-jsx-pragmatic': 0.2.1_@babel+core@7.22.10
+      '@emotion/serialize': 1.1.2
       '@types/react': 18.2.20
       '@types/react-dom': 18.2.7
       '@vitejs/plugin-react': 4.0.4_vite@4.4.9

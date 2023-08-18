@@ -6,14 +6,15 @@
   "main": "src/index.ts",
   "scripts": {},
   "peerDependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "@emotion/react": "^11.11.1",
-    "@emotion/styled": "^11.11.0"
+    "@emotion/styled": "^11.11.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@babel/plugin-transform-react-jsx": "^7.22.5",
     "@emotion/babel-plugin-jsx-pragmatic": "^0.2.1",
+    "@emotion/serialize": "^1.1.2",
     "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.7",
     "@vitejs/plugin-react": "^4.0.4",
