@@ -3,21 +3,21 @@ import tw from 'twin.macro';
 
 interface ButtonProps extends React.ComponentPropsWithoutRef<'button'> {
   variant?: 'solid' | 'outline';
-  color?: 'blue' | 'emerald';
+  color?: 'primary' | 'secondary';
 }
 
 const styles = {
   solid: {
-    blue: tw`text-white bg-blue-500 hover:bg-blue-600 active:bg-blue-700`,
-    emerald: tw`text-white bg-emerald-500 hover:bg-emerald-600 active:bg-emerald-700`,
+    primary: tw`text-white bg-primary-500 hover:bg-primary-600 active:bg-primary-700`,
+    secondary: tw`text-white bg-secondary-500 hover:bg-secondary-600 active:bg-secondary-700`,
   },
   outline: {
-    blue: tw`text-blue-500 border border-blue-500 hover:bg-blue-50 active:bg-blue-100`,
-    emerald: tw`text-emerald-500 border border-emerald-500 hover:bg-emerald-50 active:bg-emerald-100`,
+    primary: tw`text-primary-500 border border-primary-500 hover:bg-primary-50 active:bg-primary-100`,
+    secondary: tw`text-secondary-500 border border-secondary-500 hover:bg-secondary-50 active:bg-secondary-100`,
   },
 };
 
-const Button = forwardRef<HTMLButtonElement, ButtonProps>(({ variant = 'solid', color = 'blue', ...props }, forwardedRef) => {
+const Button = forwardRef<HTMLButtonElement, ButtonProps>(({ variant = 'solid', color = 'primary', ...props }, forwardedRef) => {
   return <button css={[tw`px-3 py-1 rounded shadow-sm`, styles[variant][color]]} {...props} ref={forwardedRef} />;
 });
 

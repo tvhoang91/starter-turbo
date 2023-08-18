@@ -1,10 +1,10 @@
 import type { Config } from 'tailwindcss';
-import { varColors } from '@yayturbo/tailwind';
+import { aliasColors } from '@yayturbo/tailwind';
 
 export default {
   content: [],
   theme: {
-    colors: varColors,
+    colors: aliasColors,
   },
   plugins: [],
 } satisfies Config;

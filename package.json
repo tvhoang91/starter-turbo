@@ -7,9 +7,12 @@
     "lint": "turbo run lint"
   },
   "devDependencies": {
+    "@yayturbo/tailwind": "workspace:*",
     "@turbo/gen": "^1.9.7",
     "prettier": "^3.0.1",
+    "typescript": "^5.1.6",
     "tailwindcss": "^3.3.3",
+    "twin.macro": "^3.4.0",
     "turbo": "latest"
   },
   "packageManager": "pnpm@8.6.10"

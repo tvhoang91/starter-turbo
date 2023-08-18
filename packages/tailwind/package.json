@@ -1,0 +1,13 @@
+{
+  "name": "@yayturbo/tailwind",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "src/index.ts",
+  "devDependencies": {
+    "@types/react": "^18.2.20",
+    "@yayturbo/tsconfig": "workspace:*",
+    "@yayturbo/types": "workspace:*",
+    "react": "^18.2.0"
+  }
+}

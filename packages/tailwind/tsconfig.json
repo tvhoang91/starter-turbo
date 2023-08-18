@@ -1,0 +1,12 @@
+{
+  "extends": "@yayturbo/tsconfig/dom.json",
+  "compilerOptions": {
+    "baseUrl": "./",
+    "typeRoots": ["./node_modules/@types", "types"],
+    "paths": {
+      "@yayturbo/*": ["../*"]
+    }
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "dist"]
+}

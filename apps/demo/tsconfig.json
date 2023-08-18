@@ -1,9 +1,15 @@
 {
   "extends": "@yayturbo/tsconfig/react.json",
   "compilerOptions": {
+    "baseUrl": "./",
     "jsxImportSource": "@emotion/react",
-    "typeRoots": ["node_modules/@yayturbo/types/types", "node_modules/@types", "types"]
+    "typeRoots": ["./node_modules/@types", "types"],
+    "paths": {
+      "@yayturbo/*": ["../../packages/*"],
+      "@src/*": ["./src/*"],
+      "@type/*": ["./types/*"]
+    }
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "include": ["src/**/*.ts", "src/**/*.tsx", "types"],
   "exclude": ["node_modules", "dist"]
 }

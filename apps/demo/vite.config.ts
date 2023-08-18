@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite';
+import path from 'path';
 import react from '@vitejs/plugin-react';
 import { viteExternalsPlugin } from 'vite-plugin-externals';
 
@@ -47,4 +48,12 @@ export default defineConfig({
       { disableInServe: true },
     ),
   ],
+
+  resolve: {
+    alias: [
+      { find: '@src', replacement: path.resolve(__dirname, 'src') },
+      { find: '@type', replacement: path.resolve(__dirname, 'types') },
+      { find: '@yayturbo', replacement: path.resolve(__dirname, '../../packages') },
+    ],
+  },
 });

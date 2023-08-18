@@ -20,9 +20,6 @@
     "@yayturbo/tsconfig": "workspace:*",
     "@yayturbo/types": "workspace:*",
     "babel-plugin-macros": "^3.1.0",
-    "tailwindcss": "^3.3.3",
-    "twin.macro": "^3.4.0",
-    "typescript": "^5.1.6",
     "vite": "^4.4.9",
     "vite-plugin-externals": "^0.6.2"
   }
