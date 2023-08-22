@@ -35,9 +35,14 @@ export default defineConfig({
   },
 
   build: {
+    outDir: path.resolve('../loader', 'html/scripts/dist'),
+    emptyOutDir: true,
     rollupOptions: {
       input: {
-        'main.tsx': path.resolve(__dirname, 'src/main.tsx'),
+        main: path.resolve(__dirname, 'src/main.tsx'),
+      },
+      output: {
+        entryFileNames: '[name].js',
       },
     },
   },
