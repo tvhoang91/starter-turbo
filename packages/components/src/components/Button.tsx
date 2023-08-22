@@ -2,7 +2,7 @@ import { forwardRef } from 'react';
 import type { CSSInterpolation } from '@emotion/serialize';
 import tw, { TwStyle } from 'twin.macro';
 import { SemanticColor, SemanticColorName } from '../../types/theme.type';
-import { semanticPalette } from '..//helpers/theme';
+import { semanticPalette } from '../helpers/theme';
 import { dashedStyles, linkStyles, outlineStyles, solidStyles } from './Button.styles';
 
 type Variant = 'solid' | 'outline' | 'dashed' | 'link';

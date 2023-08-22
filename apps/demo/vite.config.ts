@@ -1,7 +1,6 @@
 import { defineConfig } from 'vite';
 import path from 'path';
 import react from '@vitejs/plugin-react';
-import { viteExternalsPlugin } from 'vite-plugin-externals';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -29,22 +28,9 @@ export default defineConfig({
         ],
       },
     }),
-
-    viteExternalsPlugin(
-      {
-        react: 'React',
-        'react-dom': 'ReactDOM',
-        '@yayturbo/components': 'yayComponents',
-      },
-      { disableInServe: true },
-    ),
   ],
 
   resolve: {
-    alias: [
-      { find: '@src', replacement: path.resolve(__dirname, 'src') },
-      { find: '@type', replacement: path.resolve(__dirname, 'types') },
-      { find: '@yayturbo', replacement: path.resolve(__dirname, '../../packages') },
-    ],
+    alias: [{ find: '@src', replacement: path.resolve(__dirname, 'src') }],
   },
 });

@@ -5,9 +5,7 @@
     "jsxImportSource": "@emotion/react",
     "typeRoots": ["./node_modules/@types", "types"],
     "paths": {
-      "@yayturbo/*": ["../../packages/*"],
-      "@src/*": ["./src/*"],
-      "@type/*": ["./types/*"]
+      "@src/*": ["./src/*"]
     }
   },
   "include": ["src/**/*.ts", "src/**/*.tsx", "types"],
