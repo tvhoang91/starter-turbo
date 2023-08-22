@@ -19,12 +19,11 @@ export const solidStyles: GetVariantStyle = (semanticColor) => {
   };
 };
 
-export const outlineStyles: GetVariantStyle = (semanticColor, props) => {
+export const outlineStyles: GetVariantStyle = (semanticColor) => {
   return {
+    ...tw`border-solid border`,
     color: semanticColor['500'],
     borderColor: semanticColor['500'],
-    borderStyle: 'solid',
-    borderWidth: '1px',
     '&:hover:enabled': {
       backgroundColor: semanticColor['50'],
     },
@@ -39,7 +38,7 @@ export const dashedStyles: GetVariantStyle = (semanticColor, props) => {
   return outlineStyles(semanticColor, props);
 };
 
-export const linkStyles: GetVariantStyle = (semanticColor, props) => {
+export const linkStyles: GetVariantStyle = (semanticColor) => {
   return {
     color: semanticColor['500'],
     '&:hover:enabled': {
