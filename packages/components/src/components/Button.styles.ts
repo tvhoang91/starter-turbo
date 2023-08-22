@@ -1,4 +1,4 @@
-import { SemanticColor } from '@yayturbo/components/types/theme.type';
+import { SemanticColor } from '../../types/theme.type';
 import type { CSSInterpolation } from '@emotion/serialize';
 
 export function solidStyles(semanticColor: SemanticColor): CSSInterpolation {

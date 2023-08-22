@@ -1,5 +1,5 @@
-import palette from '@yayturbo/tailwind/src/colors/palette';
-import { Color } from '@yayturbo/tailwind/types/color.type';
+import palette from '../colors/palette';
+import { Color } from '../../types/color.type';
 import type { CSSProperties } from 'react';
 import { VAR_BLACK, VAR_WHITE } from './varColors';
 

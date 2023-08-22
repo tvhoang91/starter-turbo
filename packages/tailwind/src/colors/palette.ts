@@ -1,4 +1,4 @@
-import type { Palette } from '@yayturbo/tailwind/types/color.type';
+import type { Palette } from '../../types/color.type';
 
 const palette: Palette = {
   slate: {

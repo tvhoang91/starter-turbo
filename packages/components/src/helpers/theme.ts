@@ -1,5 +1,5 @@
 import { theme } from 'twin.macro';
-import { SemanticPalette } from '@yayturbo/components/types/theme.type';
+import { SemanticPalette } from '../../types/theme.type';
 
 export const semanticPalette: SemanticPalette = {
   primary: {
