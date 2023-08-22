@@ -14,13 +14,19 @@ function App() {
             <Button color={color} variant="solid">
               Solid
             </Button>
-            <Button color={color} variant="outline">
+            <Button color={color} variant="outline" disabled>
               Outline
             </Button>
             <Button color={color} variant="dashed">
               Dashed
             </Button>
-            <Button color={color} variant="link">
+            <Button
+              color={color}
+              variant="link"
+              onClick={() => {
+                console.log(color);
+              }}
+            >
               Link
             </Button>
           </React.Fragment>
