@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 import path from 'path';
 import react from '@vitejs/plugin-react';
+import { viteExternalsPlugin } from 'vite-plugin-externals';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -28,6 +29,16 @@ export default defineConfig({
         ],
       },
     }),
+    viteExternalsPlugin(
+      {
+        '@yayturbo/components': ['yayModules', 'components'],
+        react: ['yayModules', 'React'],
+        'react-dom': ['yayModules', 'ReactDOM'],
+        '@emotion/react': ['yayModules', 'emotionReact'],
+        '@emotion/styled': ['yayModules', 'emotionStyled'],
+      },
+      { disableInServe: true },
+    ),
   ],
 
   resolve: {
@@ -38,11 +49,20 @@ export default defineConfig({
     outDir: path.resolve('../loader', 'html/scripts/dist'),
     rollupOptions: {
       input: {
-        external: path.resolve(__dirname, 'src/external.ts'),
+        main: path.resolve(__dirname, 'src/main.tsx'),
       },
       output: {
         entryFileNames: '[name].js',
       },
+    },
+  },
+
+  server: {
+    port: 3000,
+    hmr: {
+      port: 3000,
+      host: 'localhost',
+      protocol: 'ws',
     },
   },
 });
