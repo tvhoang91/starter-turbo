@@ -1,45 +1,38 @@
 import { ComponentProps } from 'react';
 import { SemanticColor } from '../../types/theme.type';
 import type { CSSInterpolation } from '@emotion/serialize';
+import tw from 'twin.macro';
 
 export type GetVariantStyle = (semanticColor: SemanticColor, props: ComponentProps<'button'>) => CSSInterpolation;
 
-export const solidStyles: GetVariantStyle = (semanticColor, props) => {
-  const styles: CSSInterpolation = {
+export const solidStyles: GetVariantStyle = (semanticColor) => {
+  return {
     color: semanticColor['content'],
     backgroundColor: semanticColor['500'],
-  };
-  if (props.disabled) {
-    styles.filter = 'grayscale(90%)';
-  } else {
-    styles['&:hover'] = {
+    '&:hover:enabled': {
       backgroundColor: semanticColor['600'],
-    };
-    styles['&:active'] = {
+    },
+    '&:active:enabled': {
       backgroundColor: semanticColor['700'],
-    };
-  }
-  return styles;
+    },
+    '&:disabled': tw`grayscale`,
+  };
 };
 
 export const outlineStyles: GetVariantStyle = (semanticColor, props) => {
-  const styles: CSSInterpolation = {
+  return {
     color: semanticColor['500'],
     borderColor: semanticColor['500'],
     borderStyle: 'solid',
     borderWidth: '1px',
-  };
-  if (props.disabled) {
-    styles.filter = 'grayscale(90%)';
-  } else {
-    styles['&:hover'] = {
+    '&:hover:enabled': {
       backgroundColor: semanticColor['50'],
-    };
-    styles['&:active'] = {
+    },
+    '&:active:enabled': {
       backgroundColor: semanticColor['100'],
-    };
-  }
-  return styles;
+    },
+    '&:disabled': tw`grayscale`,
+  };
 };
 
 export const dashedStyles: GetVariantStyle = (semanticColor, props) => {
@@ -47,18 +40,14 @@ export const dashedStyles: GetVariantStyle = (semanticColor, props) => {
 };
 
 export const linkStyles: GetVariantStyle = (semanticColor, props) => {
-  const styles: CSSInterpolation = {
+  return {
     color: semanticColor['500'],
-  };
-  if (props.disabled) {
-    styles.filter = 'grayscale(90%)';
-  } else {
-    styles['&:hover'] = {
+    '&:hover:enabled': {
       color: semanticColor['600'],
-    };
-    styles['&:active'] = {
+    },
+    '&:active:enabled': {
       color: semanticColor['700'],
-    };
-  }
-  return styles;
+    },
+    '&:disabled': tw`grayscale`,
+  };
 };
