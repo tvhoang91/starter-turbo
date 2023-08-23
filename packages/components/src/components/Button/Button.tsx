@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import tw, { TwStyle } from 'twin.macro';
-import { SemanticColorName } from '../../types/theme.type';
-import { semanticPalette } from '../helpers/theme';
+import { SemanticColorName } from '../../../types/theme.type';
+import { semanticPalette } from '../../helpers/theme';
 import { GetVariantStyle, dashedStyles, linkStyles, outlineStyles, solidStyles } from './Button.styles';
 
 type Variant = 'solid' | 'outline' | 'dashed' | 'link';

@@ -1,5 +1,5 @@
 import { ComponentProps } from 'react';
-import { SemanticColor } from '../../types/theme.type';
+import { SemanticColor } from '../../../types/theme.type';
 import type { CSSInterpolation } from '@emotion/serialize';
 import tw from 'twin.macro';
 
