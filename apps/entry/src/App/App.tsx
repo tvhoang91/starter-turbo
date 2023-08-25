@@ -1,6 +1,7 @@
 import { Title, Button } from '@yayturbo/components';
 import { SemanticColorName } from '@yayturbo/components/types/theme.type';
 import React from 'react';
+import Tag from './Tag';
 
 const colors: SemanticColorName[] = ['primary', 'secondary', 'accent', 'success', 'warning', 'error'];
 
@@ -25,6 +26,12 @@ function App() {
             </Button>
           </React.Fragment>
         ))}
+      </div>
+      <div tw="grid gap-3 grid-cols-6 mt-6">
+        <Tag tw="bg-success-500 text-success-content">Done</Tag>
+        <Tag tw="bg-info-500 text-info-content">Progress</Tag>
+        <Tag tw="bg-warning-500 text-warning-content">Urgent</Tag>
+        <Tag tw="bg-error-500 text-error-content">Bug</Tag>
       </div>
     </div>
   );

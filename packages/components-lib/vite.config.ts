@@ -1,8 +1,7 @@
 import { defineConfig } from 'vite';
-import path from 'path';
+import { resolve } from 'path';
 import react from '@vitejs/plugin-react';
-import { visualizer } from 'rollup-plugin-visualizer';
-import { viteExternalsPlugin } from 'vite-plugin-externals';
+import dts from 'vite-plugin-dts';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -30,28 +29,22 @@ export default defineConfig({
         ],
       },
     }),
-
-    // visualizer({ template: 'network', emitFile: true, filename: 'stats.html' }),
+    dts({ include: ['lib'] }),
   ],
 
   resolve: {
-    alias: [{ find: '@src', replacement: path.resolve(__dirname, 'src') }],
+    alias: [{ find: '@src', replacement: resolve(__dirname, 'src') }],
   },
 
   build: {
-    outDir: path.resolve('../loader', 'html/scripts/dist'),
     lib: {
-      entry: { externals: path.resolve(__dirname, 'src/externals.ts') },
+      entry: { components: resolve(__dirname, 'lib/components.ts') },
       formats: ['es'],
-      name: 'yayModules',
+      fileName: (format, name) => `${name}`,
     },
-    // rollupOptions: {
-    //   input: {
-    //     external: path.resolve(__dirname, 'src/external.ts'),
-    //   },
-    //   output: {
-    //     entryFileNames: '[name].js',
-    //   },
-    // },
+
+    rollupOptions: {
+      external: ['react', 'react-dom', 'react/jsx-runtime'],
+    },
   },
 });

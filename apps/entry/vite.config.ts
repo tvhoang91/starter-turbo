@@ -2,6 +2,7 @@ import { defineConfig } from 'vite';
 import path from 'path';
 import react from '@vitejs/plugin-react';
 import { viteExternalsPlugin } from 'vite-plugin-externals';
+import { visualizer } from 'rollup-plugin-visualizer';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -32,13 +33,12 @@ export default defineConfig({
     viteExternalsPlugin(
       {
         '@yayturbo/components': ['yayModules', 'components'],
-        react: ['yayModules', 'React'],
-        'react-dom': ['yayModules', 'ReactDOM'],
         '@emotion/react': ['yayModules', 'emotionReact'],
         '@emotion/styled': ['yayModules', 'emotionStyled'],
       },
       { disableInServe: true },
     ),
+    visualizer({ template: 'treemap', emitFile: true, filename: 'stats.html' }),
   ],
 
   resolve: {

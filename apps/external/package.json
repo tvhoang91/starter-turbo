@@ -23,6 +23,7 @@
     "@yayturbo/types": "workspace:*",
     "babel-plugin-macros": "^3.1.0",
     "babel-plugin-twin": "^1.1.0",
+    "rollup-plugin-visualizer": "^5.9.2",
     "vite": "^4.4.9",
     "vite-plugin-externals": "^0.6.2"
   }
