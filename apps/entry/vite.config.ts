@@ -32,13 +32,18 @@ export default defineConfig({
     }),
     viteExternalsPlugin(
       {
+        react: ['yayModules', 'React'],
+        'react-dom': ['yayModules', 'ReactDOM'],
         '@yayturbo/components': ['yayModules', 'components'],
-        '@emotion/react': ['yayModules', 'emotionReact'],
-        '@emotion/styled': ['yayModules', 'emotionStyled'],
+        '@emotion/react': ['yayModules', 'emotion', 'react'],
+        '@emotion/react/jsx-runtime': ['yayModules', 'emotion', 'jsxRuntime'],
+        '@emotion/styled': ['yayModules', 'emotion', 'styled', 'default'],
+        '@emotion/serialize': ['yayModules', 'emotion', 'serialize'],
+        '@emotion/utils': ['yayModules', 'emotion', 'utils'],
       },
       { disableInServe: true },
     ),
-    visualizer({ template: 'treemap', emitFile: true, filename: 'stats.html' }),
+    visualizer({ template: 'network', emitFile: true, filename: 'entrystats.html' }),
   ],
 
   resolve: {

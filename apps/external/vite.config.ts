@@ -30,8 +30,7 @@ export default defineConfig({
         ],
       },
     }),
-
-    // visualizer({ template: 'network', emitFile: true, filename: 'stats.html' }),
+    visualizer({ template: 'network', emitFile: true, filename: 'externalsstats.html' }),
   ],
 
   resolve: {
@@ -39,19 +38,15 @@ export default defineConfig({
   },
 
   build: {
+    sourcemap: true,
     outDir: path.resolve('../loader', 'html/scripts/dist'),
-    lib: {
-      entry: { externals: path.resolve(__dirname, 'src/externals.ts') },
-      formats: ['es'],
-      name: 'yayModules',
+    rollupOptions: {
+      input: {
+        externals: path.resolve(__dirname, 'src/externals.ts'),
+      },
+      output: {
+        entryFileNames: '[name].js',
+      },
     },
-    // rollupOptions: {
-    //   input: {
-    //     external: path.resolve(__dirname, 'src/external.ts'),
-    //   },
-    //   output: {
-    //     entryFileNames: '[name].js',
-    //   },
-    // },
   },
 });
